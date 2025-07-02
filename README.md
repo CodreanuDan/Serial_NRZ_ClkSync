@@ -27,7 +27,7 @@ LEDs are connected to **TX Data / TX Clock** and **RX Data / RX Clock** lines to
 
 ## 🛠️ Hardware Setup
 
-> ![Hardware Diagram](docs/hw_diagram.png)  
+> ![Hardware Diagram](DOCS/diagrams/HW_Diagram.png)  
 > _Figure 2: Wiring diagram between transmitter and receiver boards_
 
 **Components:**
@@ -52,7 +52,7 @@ The transmitter:
   - **User input** via Serial Monitor
 - Displays live TX bits on LCD
 
-> ![TX Diagram](docs/tx_diagram.png)  
+> ![TX Diagram](DOCS/diagrams/TX_Diagram.png)  
 > _Figure 3: TX logic flow_
 
 ---
@@ -61,7 +61,7 @@ The transmitter:
 
 The receiver:
 
-- Uses **interrupts on RX Clock (rising edge)**
+- Uses **interrupts on RX Clock (rising edge)**  for low-latency
 - Reads **one bit per clock pulse**
 - Assembles bits into bytes
 - Builds a message string on the LCD
@@ -70,7 +70,7 @@ The receiver:
 - If message exceeds **16 characters** (1 LCD line)
 - If **no clock pulse is received for 1500 ms**
 
-> ![RX Diagram](docs/rx_diagram.png)  
+> ![RX Diagram](DOCS/diagrams/RX_Diagram.png)  
 > _Figure 4: RX logic flow_
 
 ---
@@ -79,27 +79,26 @@ The receiver:
 
 Serial output from both boards (DATA + CLOCK) is logged into `.txt` files and plotted using `matplotlib`.
 
-> ![Signal Plot](docs/signal_plot.png)  
+> ![Signal Plot](DOCS/media/Plotted_Signals.png)  
 > _Figure 5: TX and RX clock/data signal from Serial Monitor using `matplotlib`_
 
 ---
 
 ## 🎥 Demo (Live Simulation)
 
-> ![TX Hardcoded GIF](docs/demo_tx.gif)  
+> ![TX Hardcoded GIF](DOCS/media/LiveDemo.gif)  
 > _GIF 1: Transmission and reception of a hardcoded message_
 
-> ![TX User Input GIF](docs/demo_user.gif)  
+> ![TX User Input GIF](DOCS/media/UserInputLive.gif)  
 > _GIF 2: Transmission using user input via Serial Monitor_
 
-> ![TX Graph](docs/tx_graph.png)  
+> ![TX Graph](DOCS/media/HelloWorld_SerialPlotter_TX.png)  
 > _Figure 6: TX data & clock timing_
 
-> ![RX Graph](docs/rx_graph.png)  
+> ![RX Graph](DOCS/media/HelloWorld_SerialPlotter_RX.png)  
 > _Figure 7: RX data & clock reconstruction_
 
 ---
 
-## 📁 Folder Structure
 
 
