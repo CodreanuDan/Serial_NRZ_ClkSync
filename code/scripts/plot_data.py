@@ -55,7 +55,6 @@ def bits_to_ascii_string(bits):
 
 def add_decoded_text(ax, bits, ypos=1.15, label=''):
     decoded = bits_to_ascii_string(bits)
-    # Aranjăm textul pe o linie
     ax.text(0, ypos, f"{label}: {decoded}", fontsize=10, color='blue', ha='left', va='bottom', family='monospace')
 
 def main():
